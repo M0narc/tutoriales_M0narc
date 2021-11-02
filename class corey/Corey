@@ -1,0 +1,108 @@
+
+Summary:
+In this video, Corey distinguishes between a regular method, class method, and a static method.
+
+
+Firstly, a regular method is the type of method that we are used to seeing since the start of OOP tutorials.
+It is accessible through both the class and the instance, which means that we can call for the method in both
+Employee.method()
+and
+emp_1.method()
+they automatically have the instance as the first positional argument, as self.
+
+
+Secondly, class methods are the type of method used when a method is not really about an instance of a class, but the
+class itself. To create a class method, just add '@classmethod' a line before creating the class method. The class is
+automatically the first argument to be passed in, and is represented as 'cls' instead of 'class'.
+This is because 'class' is already assigned to be something else in Python. There are 2 ways of using the class method
+ as far as Corey has shown.
+
+
+First is modifying the class variable. Corey modified the 'raise_amount' class variable using a class method.
+Just remember that to access a class variable, we have to write 'cls.' before specifying the actual name.
+For example, as 'cls.raise_amount' as in the video.
+
+
+Second is making an alternative constructor. Sometimes people have information of their specific instances
+of the class available in a specific format. Corey shows an example of this where first and last names and pay are
+separated by a hyphen. Corey creates a class method that returns the class with the specific values passed in that are
+obtained by using split() method to the string passed in. User of the script can now automatically create a new instance
+ without having to parse the string at '-'.
+
+
+Corey then moves on to cover static methods. Static methods are different from regular methods an class methods
+ in that it doesn't have a class or instance that is automatically passed in as a firs positional argument.
+ They can be created by adding '@staticmethod' a line before defining the method. These are methods that have a
+ logical connection to the Class, but does not need a class or instance as an argument. Corey says that it is
+ better to make sure we create a static method rather then class or regular method when we are sure that we don't
+ make use of the class or instance within the method.
+
+
+
+1. What is inheritence1. What is inheritence?
+It is a method that allows us to create a new class that shares the same attributes and method with the original
+function, and add some extra functionality to the new class. It also does not disturb the original class.
+
+
+2. How to make a class inherit from another class?
+class Developer(Employee):
+
+
+3. Structure of classes and subclasses.
+When we input a function to a subclass, python follows the 'method resolution order', which is the chain of classes
+that it goes through to find what the method is. All classes have the built-in group of methods and attributes as
+their primary order.
+
+
+4. How to initiate the subclass so that it can handle more information than its original class can?
+There are 2 ways.
+first, using the super method as follows and pass in the arguments in interest.
+super.__init__()
+
+
+Second, call the parent's init method explicitly and pass in the arguments in interest.
+Employee.init(self, first, last, )
+
+
+5. Useful tools when exploring the inheritance system.
+.isinstance(instance, class)
+This method returns the boolean value of whether an instance belongs to a calss
+.issubclass(subclass, class)
+This method returns the boolean value of whether a class has inherited from the second class.
+
+
+6. Example of class inheritance
+Whisky library ?
+It is a method that allows us to create a new class that shares the same attributes and method with the
+original function, and add some extra functionality to the new class. It also does not disturb the original class.
+
+
+2. How to make a class inherit from another class?
+class Developer(Employee):
+
+
+3. Structure of classes and subclasses.
+When we input a function to a subclass, python follows the 'method resolution order', which is the chain of
+classes that it goes through to find what the method is. All classes have the built-in group of methods and
+attributes as their primary order.
+
+
+4. How to initiate the subclass so that it can handle more information than its original class can?
+There are 2 ways.
+first, using the super method as follows and pass in the arguments in interest.
+super.__init__()
+
+
+Second, call the parent's init method explicitly and pass in the arguments in interest.
+Employee.init(self, first, last, )
+
+
+5. Useful tools when exploring the inheritance system.
+.isinstance(instance, class)
+This method returns the boolean value of whether an instance belongs to a calss
+.issubclass(subclass, class)
+This method returns the boolean value of whether a class has inherited from the second class.
+
+
+6. Example of class inheritance
+Whisky library

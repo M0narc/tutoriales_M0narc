@@ -1,3 +1,5 @@
+import datetime
+
 
 # they allow us to logically group our data and functions
 class Employee:
@@ -25,5 +27,30 @@ class Employee:
         # this CLASS method modify the class variable
         cls.raise_amount = amount
 
+    @classmethod
+    def from_string(cls, emp_str):
+        """
+        from a string with dashes
+        this is an alternative constructor
+        :param emp_str: This param should have an input like
+        this -> franco-lujan-7000
+        :return:
+        """
+        first, last, pay = emp_str.split('-')
+        return cls(first, last, pay)
 
-print(Employee.__dict__)
+    # regular methods automatically pass the instance as the first argument 'self'
+    # static methods don't pass anything automatically
+    # we include them in our classes cuz they have some logical connection
+    # with the class, we can pass in the arguments that we want to work with
+
+    @staticmethod
+    def is_workday(day):
+        """
+        this method takes a date and returns a boolean
+        :return:
+        """
+        if day.weekday() > 5:
+            return False
+        else:
+            return True
