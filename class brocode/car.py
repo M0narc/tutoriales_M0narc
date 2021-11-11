@@ -1,6 +1,21 @@
 # This will have -> method chaining:
 # Calling multiple methods sequentially each call performs an action on the same obj and returns self
+from abc import ABC, abstractmethod
 
+
+class Vehicle(ABC):
+    # Prevents a user from creating an object of that class
+    # + compels a user to override abstract methods in a child class
+    # abstract class = a class which contains one or more abstract methods.
+    # abstract method = a method that has a declaration but does not have an implementation.
+
+    @abstractmethod
+    def go(self):
+        pass
+
+
+# using an abstract class is a good way to see if you're missing implementations
+# you did not inherit shit here btw, try it out if you want to see the error using Car(Vehicle)
 class Car:
     # a class variable is created inside of a class but not inside a constructor
     wheels = 4
