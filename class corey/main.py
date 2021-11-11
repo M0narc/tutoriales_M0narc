@@ -1,5 +1,5 @@
 import datetime
-
+from employee import Employee
 from developer import Developer
 from manager import Manager
 
@@ -8,12 +8,19 @@ if __name__ == "__main__":
     # print(Developer.is_workday(my_date))
     # print(Employee.__dict__)
     # help(Developer)
-    dev0 = Developer("Fran", "Lujan", 20000, "_Python_")
-    dev1 = Developer("Fran", "Matias", 20000, "Java")
-    manage = Manager("Fran", "lujan", 8000, [dev0])
-    manage.add_emp(dev1)
-    print(dev0.last)
-    print(dev1.last)
-    print(manage.print_emp())
-    manage.remove_emp(dev1)
-    print(manage.print_emp())
+    # dev0 = Developer("Fran", "Lujan", 20000, "_Python_")
+    # dev1 = Developer("Fran", "Matias", 20000, "Java")
+    # manage = Manager("Fran", "lujan", 8000, [dev0])
+    # manage.add_emp(dev1)
+    # print(dev0.last)
+    # print(dev1.last)
+    # print(manage.print_emp())
+    # manage.remove_emp(dev1)
+    # print(manage.print_emp())
+    emp1 = Employee("Fran", "Lujan", 20000)
+    print(emp1.fullname)
+
+    emp1.fullname = 'Franco Luján'
+
+    print(emp1.fullname)
+    print(emp1.email)

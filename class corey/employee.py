@@ -13,11 +13,22 @@ class Employee:
         self.first = first
         self.last = last
         self.pay = pay
-        self.email = first + "." + last + "@company.com"
+        # self.email = first + "." + last + "@company.com"
         Employee.emp_num += 1
 
+    @property
+    def email(self):
+        return '{}.{}@company.com'.format(self.first, self.last)
+
+    @property
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
+
+    @fullname.setter
+    def fullname(self, name):
+        first, last = name.split(' ')
+        self.first = first
+        self.last = last
 
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amount)
@@ -54,3 +65,22 @@ class Employee:
             return False
         else:
             return True
+
+    def __repr__(self):
+        """
+        it's an unambiguous representation
+        of the object that should be used for debugging and logging
+        :return:
+        """
+        return f"Employee('{self.first}','{self.last}','{self.pay}')"
+
+    def __str__(self):
+        """
+        it's a readable representation of an object
+        :return:
+        """
+        return f"('{self.fullname()}', '{self.email}')"
+
+
+    # the property decorator allows us to define a method, but we can acces is like
+    # an attribute

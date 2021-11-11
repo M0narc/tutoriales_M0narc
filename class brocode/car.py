@@ -1,3 +1,6 @@
+# This will have -> method chaining:
+# Calling multiple methods sequentially each call performs an action on the same obj and returns self
+
 class Car:
     # a class variable is created inside of a class but not inside a constructor
     wheels = 4
@@ -15,10 +18,17 @@ class Car:
         :return:
         """
         print("This car is driving")
+        return self
 
     def stop(self):
         print("This car has stoped")
+        return self
 
     def __str__(self):
         txt = f"The maker is {self.make}, the model is {self.model}, from the year {self.year} and color {self.color}"
         return txt
+
+
+car = Car("don't know", "who cares", 1994, "Red")
+car.drive()\
+    .stop()

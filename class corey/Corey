@@ -37,7 +37,7 @@ Corey then moves on to cover static methods. Static methods are different from r
  better to make sure we create a static method rather then class or regular method when we are sure that we don't
  make use of the class or instance within the method.
 
-
+-----------------------------------------------------------------------------------------------------------------------
 
 1. What is inheritence1. What is inheritence?
 It is a method that allows us to create a new class that shares the same attributes and method with the original
@@ -106,3 +106,6 @@ This method returns the boolean value of whether a class has inherited from the 
 
 6. Example of class inheritance
 Whisky library
+
+-----------------------------------------------------------------------------------------------------------------------
+
