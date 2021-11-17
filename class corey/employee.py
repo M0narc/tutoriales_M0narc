@@ -81,6 +81,5 @@ class Employee:
         """
         return f"('{self.fullname()}', '{self.email}')"
 
-
-    # the property decorator allows us to define a method, but we can acces is like
+    # the property decorator allows us to define a method, but we can access it like
     # an attribute
