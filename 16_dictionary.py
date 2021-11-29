@@ -6,6 +6,11 @@ capitals = {'USA': 'Washington DC',
             'China': 'Beijing',
             'Russia': 'Moscow'}
 
+stuff = {
+    1: "rar",
+    2: "ror",
+    3: "rir"
+}
 # print(capitals['Germany'])
 # # you need the {} in order to update
 # capitals.update({'Germany':'Berlin'})
@@ -24,3 +29,6 @@ capitals = {'USA': 'Washington DC',
 
 for key, value in capitals.items():
     print(key, value)
+
+for value in stuff.values():
+    print(value)

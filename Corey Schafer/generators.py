@@ -1,3 +1,7 @@
+# Python Generator functions allow you to declare a function that behaves likes an iterator
+# An iterator is an object that can be iterated or looped upon. It
+# is used to abstract a container of data to make it behave like an iterable object
+
 # the reason we use generators over lists is that it is much more readable
 # instead of having a new list, appending the result and returning
 # we YIELD each item just ONCE and that's it
