@@ -11,7 +11,7 @@
 def square_numbers(nums):
     # result = [] we don't need to instantiate the list
     for i in nums:
-        yield (i*i)  # result.append(i*i) is the for loop way
+        yield i * i  # result.append(i*i) is the for loop way
     # return result we don't need the return since we're using the yield
 
 
@@ -21,5 +21,9 @@ my_nums = square_numbers([1, 2, 3, 4, 5])
 # my_nums = (x*x for x in [1, 2, 3, 4, 5]) # AND THIS is the way to have it as a generator, we switch the [] for ()
 
 print(my_nums.__next__())  # prints [1, 4, 9, 16, 25]
+print(my_nums.__next__())
+print(my_nums.__next__())
+print(my_nums.__next__())
+print(my_nums.__next__())
 # you can cast this generator into a list but it loses it's purpose of being a
 # generator that actually helps performance
