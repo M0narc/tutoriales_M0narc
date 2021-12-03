@@ -8,13 +8,15 @@
 name = "Bro Code"
 
 first_name = name[:3]  # [0:3]
+print(first_name)
 
 last_name = name[4:]  # [4:end]
+print(last_name)
 
 funky_name = name[::2]  # [0:end:2]
+print(funky_name)
 
 reversed_name = name[::-1]  # [0:end:-1]
-
 print(reversed_name)
 
 website1 = "http://google.com"

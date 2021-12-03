@@ -20,3 +20,7 @@ print(full_name("Bro", "Code"))
 
 age_check = lambda age: True if age >= 18 else False
 print(age_check(18))
+
+# interview
+asd = lambda m: lambda q: q + m
+print(asd(1)(2))
