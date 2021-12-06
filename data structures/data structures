@@ -1,0 +1,21 @@
+Data structures: a named location that can be used to store and organize data
+
+example: a family tree! is a hierarchy of family relationships
+
+an array: is a collection of elements stored at contiguous memory location
+char[] array; 'h''e''l''l''o'
+
+algorithm: a collection of steps to solve a problem
+ex: baking a pizza
+    1. heat the oven to 550°F
+    2. knead the dough
+    3. add toppings
+    etc.
+
+a linear search is another ex
+a linear search one by one, examine the elements of an array
+to find a value
+
+why learn DS and algorithm?
+    1. you'll write code that is both time and memory efficient
+    2. commonly asked questions involve DS&A in coding job interviews
