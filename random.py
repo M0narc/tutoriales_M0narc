@@ -21,19 +21,21 @@
 # print(likes(r))
 
 # --------------------------------------------
-def sad(n):
-    nn = [int(s) for s in n.split(" ")]
-    return "%i %i" % (max(nn), min(nn))
+# def sad(n):
+#     nn = [int(s) for s in n.split(" ")]
+#     return "%i %i" % (max(nn), min(nn))
 
+# def l(n):
+#     return [int(i) for i in n.split()]
 
 # def das(n):
 #     # lis = sorted(n.split(" ")[::-1])
 #     num = [int(i) for i in n.split()]
-#     return f"{max(num)} {min(num)} "
+#     return f"{max(num)} {min(num)}"
 
 
-string = "-1 -22 43 74 5"
-print(sad(string))
+# string = "-1 -22 43 74 5"
+# print(sad(string))
 # ---------------------------------------------
 
 # # replacing characters in a string
