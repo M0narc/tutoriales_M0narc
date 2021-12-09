@@ -19,3 +19,10 @@ store_euros = list(map(to_euros, store))
 
 for i in store_euros:
     print(i)
+
+l = [20, 30, 40, 50]
+m = lambda x: x*2
+new_l = list(map(m,l))
+
+for i in new_l:
+    print(i)

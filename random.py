@@ -21,19 +21,19 @@
 # print(likes(r))
 
 # --------------------------------------------
-# def sad(n):
-#     nn = [int(s) for s in n.split(" ")]
-#     return "%i %i" % (max(nn), min(nn))
-#
-#
+def sad(n):
+    nn = [int(s) for s in n.split(" ")]
+    return "%i %i" % (max(nn), min(nn))
+
+
 # def das(n):
 #     # lis = sorted(n.split(" ")[::-1])
 #     num = [int(i) for i in n.split()]
 #     return f"{max(num)} {min(num)} "
-#
-#
-# string = "-1 -22 43 74 5"
-# print(das(string))
+
+
+string = "-1 -22 43 74 5"
+print(sad(string))
 # ---------------------------------------------
 
 # # replacing characters in a string
@@ -89,16 +89,91 @@
 # ('-', 15, 18) --> -3
 # ('*', 5, 5) --> 25
 # ('/', 49, 7) --> 7
-import operator
+# import operator
 
 
-def basic_op(ope, x, y):
-    o = {
-        "+": operator.add,
-        "-": operator.sub,
-        "*": operator.mul,
-        "/": operator.truediv,
-    }
-    return o[ope](x, y)
+# def basic_op(ope, x, y):
+#     o = {
+#         "+": operator.add,
+#         "-": operator.sub,
+#         "*": operator.mul,
+#         "/": operator.truediv,
+#     }
+#     return o[ope](x, y)
 
-print(basic_op("+", 6, 6))
+# print(basic_op("+", 6, 6))
+
+# -----------------------------------------------------------------
+# el final del string tiene que ser igual
+# import re
+
+# def solution(string, ending):
+#     return True if re.findall(f"{ending}$", string) else False
+
+# print(solution("abc", "bc"))
+# print(solution("samurai", "ra"))
+
+# --------------------------------------------------------------------
+# capitalize every word from a string
+# first my way
+# def to_jaden_case(string):
+#     x = [i.capitalize() for i in string.split(" ")]
+#     return " ".join(x)
+
+# print(to_jaden_case("Something strange should happen")) 
+# # second way
+
+# import string
+
+# def cap_words(s):
+#     return string.capwords(s)
+
+# print(cap_words("Something strange should happen"))
+
+# -------------------------------------------------------------------------
+
+# # filter the numbers in the list
+# def filter_list(x):
+#     return list(filter(lambda x: type(x) == int, x))
+
+# print(filter_list([1,2,'a','b', 4]))
+
+# -------------------------------------------------------------------------
+
+# sum and return the binary valor in a STRING
+
+# from typing import BinaryIO
+
+
+# def bin_sum(a,b):
+#     c = a + b
+#     return f"{c:b}"
+
+# print(bin_sum(2,2))
+
+# -------------------------------------------------------------------------
+
+# pseudo encrypt something
+"""
+Implement a pseudo-encryption algorithm which given a string S and
+an integer N concatenates all the odd-indexed characters of S with 
+all the even-indexed characters of S, this process should be repeated N times.
+"""
+# encrypt("012345", 1)  =>  "135024"
+# encrypt("012345", 2)  =>  "135024"  ->  "304152"
+# encrypt("012345", 3)  =>  "135024"  ->  "304152"  ->  "012345"
+
+# encrypt("01234", 1)  =>  "13024"
+# encrypt("01234", 2)  =>  "13024"  ->  "32104"
+# encrypt("01234", 3)  =>  "13024"  ->  "32104"  ->  "20314"
+
+"""
+Together with the encryption function, you should also implement a decryption function which reverses the process.
+
+If the string S is an empty value or the integer N is not positive, return the first argument without changes.
+"""
+def decrypt(encrypted_text, n):
+    pass
+
+def encrypt_text(text, n):
+    pass
