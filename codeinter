@@ -1,0 +1,46 @@
+# 1) - Create a list with n numbers
+#    Ex: [5,4,3,2,1]
+lst = [5, 4, 3, 2, 1]
+
+
+# 2) - Create a function that takes that list and returns a list of
+#      tuples with the original number and the number squared
+#    - Display the returned list
+#    Ex: [(5,25),(4,16),(3,9),(2,4),(1,1)]
+
+def list_of_tuples(lst):
+    t = []
+    for number in lst:
+        t.append(number ** 2)
+        lsttuple = list(zip(lst, t))
+    return lsttuple
+
+
+lst_tuple = list_of_tuples(lst)
+print(lst_tuple)
+
+
+# 3) - Create another function that receives this list of tuples as parameter
+#      and returns a plain list of the numbers contained in it
+#    - Display the returned list
+#    Ex: [5,25,4,16,3,9,2,4,1,1]
+
+def list_of_tpl_to_plain_list(x):
+    n_l = []
+    for t in x:
+        for e in t:
+            n_l.append(e)
+    return n_l
+
+
+print(list_of_tpl_to_plain_list(lst_tuple))
+
+# 4) - Display the list sorted in ascending way
+#    Ex: [1,1,2,3,4,4,5,9,16,25]
+s_list = list_of_tpl_to_plain_list(lst_tuple)
+s_list.sort()
+print(s_list)
+
+# 5) - Display that list without duplicate elements
+#    Ex: [1,2,3,4,5,9,16,25]
+print(list(set(s_list)))

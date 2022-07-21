@@ -122,7 +122,7 @@
 #     x = [i.capitalize() for i in string.split(" ")]
 #     return " ".join(x)
 
-# print(to_jaden_case("Something strange should happen")) 
+# print(to_jaden_case("Something strange should happen"))
 # # second way
 
 # import string
@@ -169,13 +169,121 @@ all the even-indexed characters of S, this process should be repeated N times.
 # encrypt("01234", 2)  =>  "13024"  ->  "32104"
 # encrypt("01234", 3)  =>  "13024"  ->  "32104"  ->  "20314"
 
-"""
-Together with the encryption function, you should also implement a decryption function which reverses the process.
+# """
+# Together with the encryption function, you should also implement a decryption function which reverses the process.
 
-If the string S is an empty value or the integer N is not positive, return the first argument without changes.
-"""
-def decrypt(encrypted_text, n):
-    pass
+# If the string S is an empty value or the integer N is not positive, return the first argument without changes.
+# """
+# def decrypt(encrypted_text, n):
+#     pass
 
-def encrypt_text(text, n):
-    pass
+# def encrypt_text(text, n):
+#     pass
+
+
+# import math
+
+# def find_next_square(sq):
+#     x = math.sqrt(sq)
+#     if int(x + 0.5) ** 2 == sq:
+#         new_perfect_square = sq + 1
+#         new_x = math.sqrt(new_perfect_square)
+#         w_switch = (int(new_x + 0.5) ** 2 == new_perfect_square)
+#         while w_switch == False: 
+#             new_perfect_square += 1
+#             new_x = math.sqrt(new_perfect_square) 
+#             w_switch = (int(new_x + 0.5) ** 2 == new_perfect_square)
+#             if w_switch:
+#                 break
+#         return new_perfect_square
+#     else:
+#         return -1
+
+
+# def test(sq):
+#     root = math.sqrt(sq)
+#     print(int(root + 0.5) ** 2 == sq)
+#     if int(root + 0.5) ** 2 == sq:
+#         print(sq, "is a perfect square")
+#     else:
+#         print(sq, "is not a perfect square")
+
+
+# #t = test(121)
+
+
+# f = find_next_square(121)
+# print(f)
+
+# # easier way
+# def find_next_square(sq):
+#     sqr = sq ** 0.5
+#     print(sqr)
+#     if sqr.is_integer():
+#         return (sqr + 1) ** 2
+#     return -1
+
+# l = ['3', '123124234', None, 'needle', 'world', 'hay', 2, '3', True, False]
+
+# def find_needle(list):
+#     return list.index('needle')
+
+# print(find_needle(l))
+
+# def opposite(n):
+#     return -abs(n)
+
+# print(opposite(26))
+
+# from re import X
+
+
+# num_list = [2, 3 , 4 , 3.67, 9]
+
+# def sum_l(a):
+#     suma_de_todo = 0
+#     for num in a:
+#         suma_de_todo = suma_de_todo + num
+#     return suma_de_todo
+
+# print(sum_l(num_list))
+
+# l_score = [100, 40, 34, 57, 29, 72, 57, 88]
+
+# def av_escore(l, mine):
+#     av = sum(l) / len(l)
+#     return mine > av
+
+# print(av_escore(l_score, 80))
+# import re
+
+# st = "45385593107843568"
+# def fake_bin(x):
+#     z = re.sub("[0-4]", "0", x)
+#     q = re.sub("[5-9]", "1", z)
+#     return q
+
+# txtdsa = fake_bin(st)
+# print(txtdsa)
+
+# from string import *
+# def fake_bin2(x):        
+#     return x.translate(str.maketrans('123456789', '006011111'))
+    
+
+# txtsad = fake_bin2(st)
+# print(txtsad)
+
+# def fake_bin3(x):
+#     return ''.join('0' if c < '5' else '1' for c in x)
+
+# st = "a b c d"
+
+# def reverse_txt(txt):
+#     """
+#     reverse text
+#     """
+#     return txt[::-1]
+
+# print(reverse_txt(st))
+
